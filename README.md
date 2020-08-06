@@ -2,7 +2,7 @@
 
 ## 1 场景
 
-本项目主要用于wiki系统(https://github.com/phachon/mm-wiki)的ldap认证系统
+本项目主要用于wiki系统(https://github.com/phachon/mm-wiki )的ldap认证系统
 
 ## 2 使用
 
@@ -84,8 +84,11 @@ curl -X POST -d "username=xdxiaodao&password=123456@&ext_data=mmwiki" http://loc
 1. 点击配置管理->登录认证->新增登录认证，依次填写如下信息：
 
 认证名称：ldap认证
+
 用户名前缀： wiki （也可以是其他自己定义的前缀)
+
 认证URL: http://localhost:8080/mmwiki/auth  （接口服务地址）
+
 扩展数据：mmwiki
 
 2. 配置后使能统一登录即可正常使用ldap登录。
