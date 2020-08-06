@@ -10,6 +10,11 @@
 
 修改src/resources/application.properties 文件中的ldap配置为自己的ldap服务器配置
 
+spring.ldap.urls=ldap://ldap.xxx.com   # 此处为实际的ldap的server地址
+spring.ldap.username=admin # 此处为进行ldap进行search的实际账号
+spring.ldap.password=123456 # 此处为进行ldap进行search的实际账号对应的密码
+spring.ldap.base=ou=user,ou=xxx,dc=xxx,dc=com # 此处为待查询的baseDn
+spring.ldap.domainName=@gmail.com # 此处为用户的邮箱后缀
 
 ### 2.2 编译并启动端口
 
