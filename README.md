@@ -6,7 +6,26 @@
 
 ## 2 使用
 
-### 2.1 修改配置
+### 2.1 使用已有的jar包运行
+
+本方式默认已安装java环境
+
+项目的dist下有已经打好的jar包，只需要按实际的ldap配置修改application.properties中的ldap配置。
+
+修改完配置后，在命令行下输入 java -jar mmwiki-auth-1.0.0.jar，出现如下内容表示已成功启动
+
+```shell
+....
+2020-08-19 11:07:54.770  INFO 11260 --- [           main] c.g.x.wiki.auth.LdapAuthApplication      : Started LdapAuthApplication in 3.896 seconds (JVM running for 4.45)
+2020-08-19 11:08:17.387  INFO 11260 --- [nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-19 11:08:17.387  INFO 11260 --- [nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-19 11:08:17.394  INFO 11260 --- [nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+
+```
+
+### 2.2 从源码重新编译运行
+
+#### 2.2.1 修改配置
 
 修改src/resources/application.properties 文件中的ldap配置为自己的ldap服务器配置
 
@@ -24,7 +43,7 @@ spring.ldap.domainName=@gmail.com # 此处为用户的邮箱后缀
 
 ```
 
-### 2.2 编译并启动端口
+#### 2.2.2 编译并启动端口
 
 在项目根目录（即wiki-auth目录下）下执行：
 
@@ -43,7 +62,7 @@ java -jar build/libs/wiki-auth-1.0.0.jar
 
 执行上述命令即可启动项目，项目默认使用8080端口接收请求
 
-### 2.3 接口
+### 2.3 验证接口服务
 
 目前项目只有一个针对wiki的接口：/mmwiki/auth
 
