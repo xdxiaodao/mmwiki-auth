@@ -1,5 +1,7 @@
 # wiki-auth使用说明
 
+[TOC]
+
 ## 1 场景
 
 本项目主要用于wiki系统(https://github.com/phachon/mm-wiki )的ldap认证系统
